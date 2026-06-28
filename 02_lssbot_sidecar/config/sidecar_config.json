@@ -1,0 +1,113 @@
+{
+  "version": "wulfpack-overseer-0.0.6",
+  "dry_run": true,
+  "lss_exe_path": "C:\\Users\\megal\\AppData\\Local\\lssbot\\LSS Bot.exe",
+  "lss_data_root": "C:\\Users\\megal\\lssbot_5",
+  "settings_dir": "C:\\Users\\megal\\AppData\\Roaming\\lssbot_5\\settings",
+  "base_profile_preference": [
+    "Farms.json",
+    "Mains.json",
+    "default.json"
+  ],
+  "active_profile_name": "zz_TASK_CHAIN_ACTIVE.json",
+  "managed_instances": [
+    "Farms",
+    "Mains"
+  ],
+  "log_globs": [
+    "%APPDATA%\\lssbot_5\\logs\\*.log",
+    "%APPDATA%\\lssbot_5\\instances\\*\\logs\\*.log",
+    "%APPDATA%\\lssbot_5\\*.log",
+    "%USERPROFILE%\\lssbot_5\\logs\\*.log",
+    "%USERPROFILE%\\lssbot_5\\**\\*.log"
+  ],
+  "process_control": {
+    "start_before_each_task": true,
+    "stop_after_task_success": true,
+    "graceful_stop_timeout_sec": 8,
+    "force_kill_after_timeout": true,
+    "process_names": [
+      "LSS Bot.exe"
+    ],
+    "start_wait_sec": 12,
+    "post_stop_wait_sec": 4,
+    "stop_before_each_task": true,
+    "hard_stop_extra_image_names": [
+      "LSS Bot.exe"
+    ],
+    "targeted_commandline_kill": true,
+    "targeted_process_names": [
+      "java.exe",
+      "javaw.exe",
+      "LSS Bot.exe"
+    ],
+    "targeted_commandline_patterns": [
+      "lssbot",
+      "LSS Bot",
+      "lssbot_5"
+    ],
+    "hard_stop_post_wait_sec": 2
+  },
+  "task_runtime": {
+    "max_task_runtime_sec": 1800,
+    "max_retries_per_task": 5,
+    "abort_on_wrong_active_script": true,
+    "abort_on_loop_account_zero_after_last_account": true,
+    "hard_stop_immediately_on_last_account": true,
+    "old_loop_guard_after_last_account_sec": 120,
+    "abort_if_profile_matched_zero": true,
+    "log_poll_interval_sec": 0.25,
+    "dry_run_task_limit": 0,
+    "skip_after_max_retries": true
+  },
+  "recovery": {
+    "enabled": true,
+    "max_consecutive_recoveries": 3,
+    "reset_to_same_task_after_recovery": true
+  },
+  "irc": {
+    "enabled": false,
+    "config_file": "config/irc_config.json",
+    "send_raw_log": true,
+    "send_translated_events": true,
+    "prefix_format": "[{instance}]",
+    "rate_limit_messages_per_minute": 90
+  },
+  "redaction": {
+    "enabled": true,
+    "config_file": "config/redaction_policy.json"
+  },
+  "status_files": {
+    "state_file": "state/sidecar_state.json",
+    "audit_log": "logs/sidecar_audit.log"
+  },
+  "loading_solver_guard": {
+    "enabled": true,
+    "min_seconds_after_loading_solver_stop_before_script": 8,
+    "premature_script_start_action": "warn",
+    "_comment": "warn = nur melden; retry = LSS hart stoppen und gleichen Task neu versuchen. Sidecar kann den internen LSS Loading Solver nicht direkt verlangsamen."
+  },
+  "wait_policy": {
+    "config_file": "config/wait_policy.json"
+  },
+  "base_profile_exclude_names": [
+    "zz_TASK_CHAIN_ACTIVE.json"
+  ],
+  "profile_writer": {
+    "add_missing_active_key": true,
+    "map_boolean_script_keys": true,
+    "disable_non_selected_scripts": true,
+    "_comment": "V4.3: aktives Chain-Profil nie als Basis; robustere Script-Erkennung."
+  },
+  "lss_instance_settings_overrides": {
+    "enabled": true,
+    "_source": "Feldnamen aus lssbot5.jar/com.lssbot.core.framework.botinstance.LSSBotInstanceSettings per Bytecode-Inspektion abgeleitet; Best-Effort nur wenn diese Felder im JSON-Profil vorkommen.",
+    "values": {
+      "stopInstanceAfterLoop": true,
+      "randomizeTaskOrder": false,
+      "ignoreCooldowns": false,
+      "sleepBaseEnterMills": 9000,
+      "sleepMapOpenMills": 6000
+    }
+  }
+}

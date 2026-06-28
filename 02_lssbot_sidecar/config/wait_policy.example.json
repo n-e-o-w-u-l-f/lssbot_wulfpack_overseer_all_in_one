@@ -1,0 +1,31 @@
+{
+  "version": "4.2.0",
+  "enabled": true,
+  "note": "Best effort: erhöht nur vorhandene numerische Wait/Delay-Felder im echten LSS-Profil. Wenn LSS diese Felder nicht nutzt, ist ein interner LSS-Script/JAR-Patch nötig.",
+  "numeric_key_overrides": [
+    {
+      "key_regex": "(pre.*click|before.*click|click.*delay|clickDelay|tapDelay|pressDelay)",
+      "min_value": 1800
+    },
+    {
+      "key_regex": "(post.*click|after.*click|afterClick|waitAfterClick)",
+      "min_value": 1600
+    },
+    {
+      "key_regex": "(popup.*wait|wait.*popup|message.*wait|dialog.*wait)",
+      "min_value": 9000
+    },
+    {
+      "key_regex": "(loading.*wait|wait.*loading|post.*load|after.*load|settle|stabil)",
+      "min_value": 9000
+    },
+    {
+      "key_regex": "(page.*update|update.*wait|wait.*page)",
+      "min_value": 3500
+    },
+    {
+      "key_regex": "(region.*cooldown|click.*cooldown|same.*region)",
+      "min_value": 3000
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "lssbot_sidecar_wulfpack_overseer_v0.0.6_sidecar_only",
+  "version": "0.0.9",
+  "type": "sidecar_only",
+  "contains_queue_generator": false,
+  "base": "lss_sidecar_v4_4_no_config_process_fix",
+  "entrypoints": [
+    "00_RUNNER.cmd",
+    "01_IMPORT_QUEUE.cmd",
+    "02_DRY_RUN.cmd",
+    "03_SCAN_PROFILES.cmd",
+    "04_VALIDATE_CONFIG.cmd",
+    "05_SELF_TEST.cmd",
+    "06_REPLAY_TASK10.cmd",
+    "07_STOP_LSSBOT.cmd"
+  ],
+  "primary": "00_RUNNER.cmd",
+  "script": "src/lssbot_sidecar_wulfpack_overseer.py",
+  "queue_import": {
+    "input": [
+      "%USERPROFILE%\\lss_character_queue_v5_final\\lss_character_queue_v5_final.generated.json",
+      "%USERPROFILE%\\lss_character_queue_v1_337a\\lss_character_queue_v1_337a.generated.json"
+    ],
+    "output": "config\\task_chain.json"
+  },
+  "lssbot_integration": {
+    "exe": "%LOCALAPPDATA%\\lssbot\\LSS Bot.exe",
+    "settings": "%APPDATA%\\lssbot_5\\settings",
+    "active_profile": "%APPDATA%\\lssbot_5\\settings\\zz_TASK_CHAIN_ACTIVE.json"
+  },
+  "recovery": {
+    "max_retries_per_task": 5,
+    "skip_after_max_retries": true,
+    "hard_stop_on_last_account": true
+  },
+  "changes": [
+    "Full Queue1-Queue6 preset definitions added",
+    "Preset documentation and JSON added"
+  ]
+}

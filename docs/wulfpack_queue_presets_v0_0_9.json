@@ -1,0 +1,335 @@
+{
+  "version": "0.0.9",
+  "policy": {
+    "repeatable_wrapper_in_every_queue": true,
+    "collect_quest_rewards_only_in_final_queue": true,
+    "zombie_max_level": 40,
+    "shield_rule": "Buff > Shield > 2hr + shield_on_everyday + Gathering Search Menu",
+    "gather_speedup_rule": "Buff > Gather Speedup + Gathering Search Menu + Alliance Gathering",
+    "base_resource_rule": "Collect Serum/Food/Wood/Steel/Gas and confirm antiserum storage limit message when shown"
+  },
+  "wrapper": [
+    "speedup_help",
+    "nova_daily_praise",
+    "nova_research",
+    "noah_tavern",
+    "radio_quiz",
+    "collect_base_resources",
+    "alliance_research",
+    "alliance_gifts"
+  ],
+  "layouts": {
+    "4": [
+      {
+        "id": "queue1",
+        "name": "Queue1 Alliance + Gathering Core",
+        "purpose": "Alliance daily core plus gathering setup.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "alliance_gathering",
+          "gathering_boost",
+          "resource_gathering",
+          "pit_gather"
+        ]
+      },
+      {
+        "id": "queue2",
+        "name": "Queue2 Base + Military Maintenance",
+        "purpose": "Base maintenance and military housekeeping without final reward claims.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "shield",
+          "hq_upgrading",
+          "building_upgrading",
+          "research",
+          "wall_repair",
+          "trap_crafting",
+          "troop_training",
+          "troop_healing",
+          "tavern_recruitment",
+          "skills"
+        ]
+      },
+      {
+        "id": "queue3",
+        "name": "Queue3 Economy + Inventory Utility",
+        "purpose": "Economy, inventory and safe utility collections, still without quest rewards.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "game_gifts",
+          "bag_items",
+          "supply_depot",
+          "bank_investment",
+          "ruins"
+        ]
+      },
+      {
+        "id": "queue4",
+        "name": "Queue4 Final Rewards + Puzzle + Zombies",
+        "purpose": "Final block. This is the only 4-queue preset block containing quest reward collection.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "campaign_puzzle_auto",
+          "campaign_puzzle_general",
+          "dynamic_base_puzzles",
+          "duel_survival",
+          "pit_attack",
+          "zombies_40",
+          "quest_rewards"
+        ]
+      }
+    ],
+    "5": [
+      {
+        "id": "queue1",
+        "name": "Queue1 Alliance",
+        "purpose": "Alliance research, gifts, gathering, gather-speed setup.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "alliance_gathering",
+          "gathering_boost",
+          "resource_gathering"
+        ]
+      },
+      {
+        "id": "queue2",
+        "name": "Queue2 Base Maintenance",
+        "purpose": "HQ, buildings, research, wall, traps, shield.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "shield",
+          "hq_upgrading",
+          "building_upgrading",
+          "research",
+          "wall_repair",
+          "trap_crafting"
+        ]
+      },
+      {
+        "id": "queue3",
+        "name": "Queue3 Military",
+        "purpose": "Training, healing, tavern, skills.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "troop_training",
+          "troop_healing",
+          "tavern_recruitment",
+          "skills"
+        ]
+      },
+      {
+        "id": "queue4",
+        "name": "Queue4 Rewards Inventory Economy",
+        "purpose": "Gifts, bag, supply, bank, ruins, pit gather. Quest rewards excluded.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "game_gifts",
+          "bag_items",
+          "supply_depot",
+          "bank_investment",
+          "ruins",
+          "pit_gather"
+        ]
+      },
+      {
+        "id": "queue5",
+        "name": "Queue5 Final Quest Rewards + Puzzle/Zombies",
+        "purpose": "Final block. This is the only 5-queue preset block containing quest reward collection.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "campaign_puzzle_auto",
+          "campaign_puzzle_general",
+          "dynamic_base_puzzles",
+          "duel_survival",
+          "pit_attack",
+          "zombies_40",
+          "quest_rewards"
+        ]
+      }
+    ],
+    "6": [
+      {
+        "id": "queue1",
+        "name": "Queue1 Alliance Research + Gifts + Gathering",
+        "purpose": "Clean alliance block with gathering and gather speedup.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "alliance_gathering",
+          "gathering_boost",
+          "resource_gathering"
+        ]
+      },
+      {
+        "id": "queue2",
+        "name": "Queue2 Base Maintenance",
+        "purpose": "HQ, buildings, research, wall, traps and daily 2hr shield.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "shield",
+          "hq_upgrading",
+          "building_upgrading",
+          "research",
+          "wall_repair",
+          "trap_crafting"
+        ]
+      },
+      {
+        "id": "queue3",
+        "name": "Queue3 Military",
+        "purpose": "Military-only block.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "troop_training",
+          "troop_healing",
+          "tavern_recruitment",
+          "skills"
+        ]
+      },
+      {
+        "id": "queue4",
+        "name": "Queue4 Resources / Economy",
+        "purpose": "Resource gathering and economy. Quest rewards excluded.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "resource_gathering",
+          "gathering_boost",
+          "alliance_gathering",
+          "supply_depot",
+          "bank_investment",
+          "pit_gather"
+        ]
+      },
+      {
+        "id": "queue5",
+        "name": "Queue5 Rewards / Inventory / Puzzle",
+        "purpose": "Rewards except quest rewards, inventory and puzzle.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "game_gifts",
+          "bag_items",
+          "ruins",
+          "campaign_puzzle_auto",
+          "campaign_puzzle_general",
+          "dynamic_base_puzzles",
+          "duel_survival",
+          "pit_attack"
+        ]
+      },
+      {
+        "id": "queue6",
+        "name": "Queue6 Final Quest Rewards + Zombies 40",
+        "purpose": "Final block. Only block containing quest rewards. Exactly one zombie block.",
+        "tasks": [
+          "speedup_help",
+          "nova_daily_praise",
+          "nova_research",
+          "noah_tavern",
+          "radio_quiz",
+          "collect_base_resources",
+          "alliance_research",
+          "alliance_gifts",
+          "zombies_40",
+          "quest_rewards"
+        ]
+      }
+    ]
+  }
+}

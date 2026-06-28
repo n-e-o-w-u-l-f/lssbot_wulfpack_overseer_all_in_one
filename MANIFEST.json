@@ -1,0 +1,30 @@
+{
+  "name": "lssbot_wulfpack_overseer_all_in_one_v0.0.9",
+  "version": "0.0.9",
+  "type": "all_in_one",
+  "primary_command": "00_START_ALL.cmd",
+  "minimal_steps": [
+    ".\\00_START_ALL.cmd"
+  ],
+  "changes": [
+    "Q1/Q2/Q3/Q4/Q5/Q6 direct preset input supported",
+    "Tasks resolved into expanded_subtasks and options",
+    "Repeatable wrapper added to every preset queue",
+    "Collect Quest Rewards only appears in final preset queue",
+    "Shield rule: 2hr everyday + Gathering Search Menu",
+    "Gather Speedup rule: Gathering Search Menu + Alliance Gathering",
+    "Zombie max fixed to 40; 39-59 removed",
+    "Full Queue1-Queue6 preset definitions added",
+    "Preset documentation and JSON added"
+  ],
+  "folders": {
+    "queue_generator": "01_queue_generator",
+    "lssbot_sidecar": "02_lssbot_sidecar"
+  },
+  "preset_files": [
+    "docs/TASK_PRESETS.md",
+    "docs/wulfpack_queue_presets_v0_0_9.json",
+    "01_queue_generator/docs/TASK_PRESETS.md",
+    "01_queue_generator/config_wulfpack_queue_presets_v0_0_9.json"
+  ]
+}

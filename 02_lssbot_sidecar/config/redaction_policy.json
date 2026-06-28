@@ -1,0 +1,22 @@
+{
+  "version": "4.0.0",
+  "enabled": true,
+  "patterns": [
+    {
+      "name": "email_field",
+      "regex": "email=([^,\\)]+)",
+      "replace": "email=<redacted>"
+    },
+    {
+      "name": "pin_field",
+      "regex": "pin=([^,\\)]+)",
+      "replace": "pin=<redacted>"
+    },
+    {
+      "name": "secret_fields",
+      "regex": "(?i)(password|passwd|pwd|token|apikey|api_key|cookie|secret)=([^\\s,;]+)",
+      "replace": "\\1=<redacted>"
+    }
+  ],
+  "keep_game_account_names": true
+}

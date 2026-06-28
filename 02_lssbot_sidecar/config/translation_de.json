@@ -1,0 +1,77 @@
+{
+  "version": "4.2.0",
+  "rules": [
+    {
+      "regex": "Executing a total of (\\d+) scripts",
+      "message": "führt {1} Script(s) aus"
+    },
+    {
+      "regex": "Filtered the script queue.*: 1\\) (.+)$",
+      "message": "aktive Script-Queue: {1}"
+    },
+    {
+      "regex": "Stopping script \\\"Account Switcher\\\".*-5 \\(Switched to the last account\\)",
+      "message": "letzter Charakter erreicht; Task ist fertig"
+    },
+    {
+      "regex": "Stopping script \\\"Account Switcher\\\".*-1 \\(Completed\\)",
+      "message": "Charakterwechsel abgeschlossen"
+    },
+    {
+      "regex": "Stopping script \\\"Account Switcher\\\".*-2 \\(Failed\\)",
+      "message": "Fehler beim Charakterwechsel"
+    },
+    {
+      "regex": "Snapshot error",
+      "message": "Emulator-Screenshot fehlgeschlagen; Recovery nötig"
+    },
+    {
+      "regex": "State DISCONNECTED|DISCONNECTED",
+      "message": "Emulator/ADB-Verbindung getrennt"
+    },
+    {
+      "regex": "Timeout getting a response from the device",
+      "message": "keine Antwort vom Emulator; ADB-Reconnect nötig"
+    },
+    {
+      "regex": "Game is loading",
+      "message": "Spiel lädt"
+    },
+    {
+      "regex": "Checking for additional popups",
+      "message": "prüft zusätzliche Popups"
+    },
+    {
+      "regex": "Stopping script \\\"(.+)\\\".*-8 \\(Skipped - on cooldown\\)",
+      "message": "Script {1} wurde wegen Cooldown übersprungen"
+    },
+    {
+      "regex": "Starting from account ID (\\d+)",
+      "message": "beginnt bei Account-ID {1}"
+    },
+    {
+      "regex": "Switched to\\s+\\(([^\\)]+)\\)",
+      "message": "zu Charakter {1} gewechselt"
+    },
+    {
+      "regex": "The next account on the list is (.+)$",
+      "message": "nächster Charakter: {1}"
+    },
+    {
+      "regex": "Loading Solver beendet; Popup-Grace-Guard aktiv",
+      "message": "Loading Solver ist fertig; Sidecar wartet/überwacht Popup-Stabilität"
+    },
+    {
+      "regex": "Warnung: Script startete kurz nach Loading Solver",
+      "message": "Warnung: Script startet sehr früh nach dem Laden; Popup kann noch fehlen"
+    },
+    {
+      "regex": "Alter Loop nach letztem Account erkannt",
+      "message": "Endlosloop nach letztem Account erkannt; LSS wird hart gestoppt"
+    },
+    {
+      "regex": "Task (\\d+) fertig: letzter Charakter erreicht",
+      "message": "Task {1} ist über alle Charaktere gelaufen"
+    }
+  ]
+}
